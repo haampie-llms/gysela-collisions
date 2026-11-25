@@ -83,7 +83,9 @@ function(koliop_dependent_target_build_options target_name)
                         PRIVATE ${koliop_LINKER_FLAGS})
 
     set_target_properties("${target_name}"
-                          PROPERTIES CXX_STANDARD 20)
+                          PROPERTIES CXX_STANDARD 20
+                                     CUDA_STANDARD 20
+                                     HIP_STANDARD 20)
 
     koliop_target_enable_lto("${target_name}")
 endfunction()
